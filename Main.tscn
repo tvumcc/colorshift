@@ -6,9 +6,8 @@
 [node name="Main" type="Node2D"]
 position = Vector2( 166, 36 )
 
-[node name="Prism" parent="." instance=ExtResource( 1 )]
-position = Vector2( 314, 452 )
-z_as_relative = false
-
 [node name="RedLevel1" parent="." instance=ExtResource( 2 )]
 position = Vector2( -166, -36 )
+
+[node name="Prism" parent="." instance=ExtResource( 1 )]
+position = Vector2( 306, 484 )
