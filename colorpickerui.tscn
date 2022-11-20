@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/colorui/buttonsprites/redbutton.png" type="Texture" id=1]
+[ext_resource path="res://assets/colorui/buttonsprites/yellowbutton.png" type="Texture" id=2]
+[ext_resource path="res://assets/colorui/buttonsprites/redbit.png" type="BitMap" id=3]
+[ext_resource path="res://assets/colorui/buttonsprites/bluebutton.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://assets/colorui/buttonsprites/purplebutton.png" type="Texture" id=6]
+[ext_resource path="res://assets/colorui/buttonsprites/bluebit.png" type="BitMap" id=7]
+[ext_resource path="res://assets/colorui/buttonsprites/yellowbit.png" type="BitMap" id=8]
+[ext_resource path="res://assets/colorui/buttonsprites/greenbit.png" type="BitMap" id=9]
+[ext_resource path="res://assets/colorui/buttonsprites/purplebit.png" type="BitMap" id=10]
+[ext_resource path="res://assets/colorui/buttonsprites/greenbutton.png" type="Texture" id=11]
+
+[node name="asdf" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="buttons" type="Node2D" parent="."]
+visible = false
+position = Vector2( -2050, -1096 )
+scale = Vector2( 5, 5 )
+
+[node name="red" type="TextureButton" parent="buttons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 511.5
+margin_top = 228.0
+margin_right = 562.5
+margin_bottom = 272.0
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 5 )
+texture_click_mask = ExtResource( 3 )
+
+[node name="yellow" type="TextureButton" parent="buttons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 528.0
+margin_top = 266.0
+margin_right = 568.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 2 )
+texture_click_mask = ExtResource( 8 )
+
+[node name="green" type="TextureButton" parent="buttons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 483.0
+margin_top = 300.0
+margin_right = 543.0
+margin_bottom = 340.0
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 5 )
+texture_click_mask = ExtResource( 9 )
+
+[node name="blue" type="TextureButton" parent="buttons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 461.0
+margin_top = 266.0
+margin_right = 501.0
+margin_bottom = 321.0
+texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_click_mask = ExtResource( 7 )
+
+[node name="purple" type="TextureButton" parent="buttons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 462.0
+margin_top = 228.0
+margin_right = 512.0
+margin_bottom = 272.0
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+texture_click_mask = ExtResource( 10 )
