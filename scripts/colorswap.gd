@@ -12,10 +12,10 @@ onready var uiscene = get_node("/root/Colorpickerui/buttons")
 func _ready():
 	for col in colors:
 		get_node(col).set_process(false)
+		get_node(col).hide()
 	get_node(colors[currentcolor]).set_process(true) # sets a default color
 	get_node(colors[currentcolor]).show()
-	get_node(player).collision_layer = currentcolor + 1
-	get_node(player).collision_mask = currentcolor + 1
+	get_node(player).set_collision_mask_bit(currentcolor, true)
 	
 
 
@@ -33,7 +33,7 @@ func _process(delta):
 			uiscene.hide()
 
 func colorwheel(): 
-	#checks if an button is hovered over when shift is released and swaps to it if so
+	#checks if a button is hovered over when shift is released and swaps to it if so
 	if uiscene.get_child(0).is_hovered():
 		print("red")
 		swapcolors(0)
@@ -54,24 +54,12 @@ func colorwheel():
 		print("purple")
 		swapcolors(4)
 
-#func tempnuminputs():
-#	if Input.is_action_pressed("1"):
-#		swapcolors(0)
-#	if Input.is_action_pressed("2"):
-#		swapcolors(1)
-#	if Input.is_action_pressed("3"):
-#		swapcolors(2)
-#	if Input.is_action_pressed("4"):
-#		swapcolors(3)
-#	if Input.is_action_pressed("5"):
-#		swapcolors(4)
-
 func swapcolors(var new):
 	get_node(colors[currentcolor]).set_process(false) #deactivates scripts on old color
 	get_node(colors[currentcolor]).hide() # hides old color
+	get_node(player).set_collision_mask_bit(currentcolor, false)
+	
 	get_node(colors[new]).set_process(true) # activates new color
 	get_node(colors[new]).show() # makes new color visible
+	get_node(player).set_collision_mask_bit(new, true)
 	currentcolor = new # updates current
-	get_node(player).collision_layer = currentcolor + 1
-	get_node(player).collision_mask = currentcolor + 1
-

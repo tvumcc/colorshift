@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/colors/colorscheme.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 1000, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 100, 100 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 100, 100 )
+
+[node name="Level_01_Purple" type="Node2D"]
+
+[node name="Floor" type="Sprite" parent="."]
+position = Vector2( 512, 584 )
+scale = Vector2( 5.12, 0.16 )
+texture = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Floor"]
+collision_layer = 16
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/KinematicBody2D"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Left-Wall" type="Sprite" parent="."]
+position = Vector2( 16, 285 )
+scale = Vector2( 0.16, 2.85 )
+texture = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Left-Wall"]
+collision_layer = 16
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left-Wall/KinematicBody2D"]
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Right-Wall" type="Sprite" parent="."]
+position = Vector2( 1008, 284 )
+scale = Vector2( 0.16, 2.85 )
+texture = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Right-Wall"]
+collision_layer = 16
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right-Wall/KinematicBody2D"]
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Platform" type="Sprite" parent="."]
+position = Vector2( 296, 72 )
+scale = Vector2( 1.04, 0.0650001 )
+texture = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Platform"]
+collision_layer = 16
+collision_mask = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/KinematicBody2D"]
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
