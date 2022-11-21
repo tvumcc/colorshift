@@ -1,29 +1,26 @@
 extends Node2D
 
+export(Array) var levelexport # exports objects in an array because you cant normally export objects for some reason
+var levelpack # the PackedScene for the current level
+var level # the instance of the current level
 
-
-export(Array) var colors # list of all the different colored rooms
+var colors = [] # list of all the different colored rooms
 export(int) var currentcolor # current colored room
+
 export(NodePath) var player
+
 var wheelvis = false
 onready var uiscene = get_node("/root/Colorpickerui/buttons")
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	for col in colors:
-		get_node(col).set_process(false)
-		get_node(col).hide()
-	get_node(colors[currentcolor]).set_process(true) # sets a default color
-	get_node(colors[currentcolor]).show()
-	get_node(player).set_collision_mask_bit(currentcolor, true)
-	
+func _ready():	
+	levelpack = levelexport[0] # sets the PackedScene to the first object in level export
+	level = levelpack.instance() # instances the scene to not bug loadlevel
+	loadlevel(levelpack) # does sets up everything in using a PackedScene
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#print(get_node(player).collision_layer)
-	#print(get_node(player).collision_mask)
-	#print(currentcolor)
 	if Input.is_action_pressed("colorui"):#pulls up color wheel ui
 		wheelvis = true
 		uiscene.show()
@@ -31,6 +28,13 @@ func _process(delta):
 		if Input.is_action_just_released("colorui"): #change color based on hover when released
 			colorwheel()
 			uiscene.hide()
+			
+	if Input.is_action_just_pressed("1"):
+		loadlevel(levelexport[0])
+		print("aaa")
+	if Input.is_action_just_pressed("2"):
+		loadlevel(levelexport[1])
+		print("bbb")
 
 func colorwheel(): 
 	#checks if a button is hovered over when shift is released and swaps to it if so
@@ -55,11 +59,30 @@ func colorwheel():
 		swapcolors(4)
 
 func swapcolors(var new):
-	get_node(colors[currentcolor]).set_process(false) #deactivates scripts on old color
-	get_node(colors[currentcolor]).hide() # hides old color
+	colors[currentcolor].set_process(false) #deactivates scripts on old color
+	colors[currentcolor].hide() # hides old color
 	get_node(player).set_collision_mask_bit(currentcolor, false)
 	
-	get_node(colors[new]).set_process(true) # activates new color
-	get_node(colors[new]).show() # makes new color visible
+	colors[new].set_process(true) # activates new color
+	colors[new].show() # makes new color visible
 	get_node(player).set_collision_mask_bit(new, true)
 	currentcolor = new # updates current
+	
+func loadlevel(var newlevel):
+	levelpack = newlevel # updates level
+	
+	level.queue_free() # removes current level
+	level = levelpack.instance() # instantiates the level and sets level to that
+	add_child(level) # adds it as a child of main
+	
+	colors.clear() # resets colors list
+	for i in range(5): # gets colors from level children
+		colors.append(level.get_child(i))
+		
+	for col in colors: # deactivates all colors
+		col.set_process(false)
+		col.hide()
+	colors[currentcolor].set_process(true) # sets a default color
+	colors[currentcolor].show()
+	
+	get_node(player).set_collision_mask_bit(currentcolor, true)

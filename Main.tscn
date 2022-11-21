@@ -1,18 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Prism.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Levels/01/Red1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/01/Level_01.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/colorswap.gd" type="Script" id=3]
-[ext_resource path="res://Levels/01/Yellow1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/02/Level_02.tscn" type="PackedScene" id=4]
 [ext_resource path="res://colorpickerui.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Levels/01/Green1.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Levels/01/Blue1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Levels/01/Purple1.tscn" type="PackedScene" id=8]
 
 [node name="Main" type="Node2D"]
-position = Vector2( 166, 36 )
 script = ExtResource( 3 )
-colors = [ NodePath("Level_01_Red"), NodePath("Level_01_Yellow"), NodePath("Level_01_Green"), NodePath("Level_01_Blue"), NodePath("Level_01_Purple") ]
+levelexport = [ ExtResource( 2 ), ExtResource( 4 ) ]
 player = NodePath("Prism")
 
 [node name="Prism" parent="." instance=ExtResource( 1 )]
@@ -21,26 +17,3 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="ui" parent="." instance=ExtResource( 5 )]
-margin_left = -166.0
-margin_top = -36.0
-margin_right = -166.0
-margin_bottom = -36.0
-
-[node name="Level_01_Red" parent="." instance=ExtResource( 2 )]
-position = Vector2( -166, -36 )
-
-[node name="Level_01_Yellow" parent="." instance=ExtResource( 4 )]
-visible = false
-position = Vector2( -166, -36 )
-
-[node name="Level_01_Green" parent="." instance=ExtResource( 6 )]
-visible = false
-position = Vector2( -166, -36 )
-
-[node name="Level_01_Blue" parent="." instance=ExtResource( 7 )]
-visible = false
-position = Vector2( -166, -36 )
-
-[node name="Level_01_Purple" parent="." instance=ExtResource( 8 )]
-visible = false
-position = Vector2( -166, -36 )

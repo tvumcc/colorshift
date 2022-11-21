@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Levels/01/Yellow1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Levels/01/Blue1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/01/Purple1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/01/Red1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/01/Green1.tscn" type="PackedScene" id=5]
+
+[node name="Level_01" type="Node2D"]
+
+[node name="Level_01_Red" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="Level_01_Yellow" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="Level_01_Green" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="Level_01_Blue" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="Level_01_Purple" parent="." instance=ExtResource( 3 )]
+visible = false
