@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/redbutton.png-fcbfbfa598d7e2fb2f0e57fd3f31395e.stex"
+path="res://.import/redbuttonhover.png-62eb5068c969257dba47eb1beb3b45a7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colorui/buttonsprites/redbutton.png"
-dest_files=[ "res://.import/redbutton.png-fcbfbfa598d7e2fb2f0e57fd3f31395e.stex" ]
+source_file="res://assets/colorui/redbuttonhover.png"
+dest_files=[ "res://.import/redbuttonhover.png-62eb5068c969257dba47eb1beb3b45a7.stex" ]
 
 [params]
 

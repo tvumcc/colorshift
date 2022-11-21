@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/purplebit.png-c9bc1e7269448e5a33d080aba06d5142.res"
+
+[deps]
+
+source_file="res://assets/colorui/purplebit.png"
+dest_files=[ "res://.import/purplebit.png-c9bc1e7269448e5a33d080aba06d5142.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -30,13 +30,17 @@ margin_bottom = -36.0
 position = Vector2( -166, -36 )
 
 [node name="Level_01_Yellow" parent="." instance=ExtResource( 4 )]
+visible = false
 position = Vector2( -166, -36 )
 
 [node name="Level_01_Green" parent="." instance=ExtResource( 6 )]
+visible = false
 position = Vector2( -166, -36 )
 
 [node name="Level_01_Blue" parent="." instance=ExtResource( 7 )]
+visible = false
 position = Vector2( -166, -36 )
 
 [node name="Level_01_Purple" parent="." instance=ExtResource( 8 )]
+visible = false
 position = Vector2( -166, -36 )

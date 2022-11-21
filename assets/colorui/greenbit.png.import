@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/greenbit.png-3e9b11ee279d7074340341aee7c91716.res"
+
+[deps]
+
+source_file="res://assets/colorui/greenbit.png"
+dest_files=[ "res://.import/greenbit.png-3e9b11ee279d7074340341aee7c91716.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

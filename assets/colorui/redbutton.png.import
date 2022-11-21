@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/purplebutton.png-fd37a6c8a428314e152c7cc13711579a.stex"
+path="res://.import/redbutton.png-fae039791c3a721e631c0383f643df6b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colorui/buttonsprites/purplebutton.png"
-dest_files=[ "res://.import/purplebutton.png-fd37a6c8a428314e152c7cc13711579a.stex" ]
+source_file="res://assets/colorui/redbutton.png"
+dest_files=[ "res://.import/redbutton.png-fae039791c3a721e631c0383f643df6b.stex" ]
 
 [params]
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/redbit.png-748c06fde957d8a7d4f738b4b8d3e386.res"
+
+[deps]
+
+source_file="res://assets/colorui/redbit.png"
+dest_files=[ "res://.import/redbit.png-748c06fde957d8a7d4f738b4b8d3e386.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

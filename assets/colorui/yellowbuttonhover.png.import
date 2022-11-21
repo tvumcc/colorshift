@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/colorwheel.png-a78637643d0ada3dcd11b91175e879ee.stex"
+path="res://.import/yellowbuttonhover.png-7c42b343f567d99d3da62832c4d44338.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colorui/buttonsprites/colorwheel.png"
-dest_files=[ "res://.import/colorwheel.png-a78637643d0ada3dcd11b91175e879ee.stex" ]
+source_file="res://assets/colorui/yellowbuttonhover.png"
+dest_files=[ "res://.import/yellowbuttonhover.png-7c42b343f567d99d3da62832c4d44338.stex" ]
 
 [params]
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/bluebit.png-7607b0bb819d1020cf2d7abc70ce68b1.res"
+
+[deps]
+
+source_file="res://assets/colorui/bluebit.png"
+dest_files=[ "res://.import/bluebit.png-7607b0bb819d1020cf2d7abc70ce68b1.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

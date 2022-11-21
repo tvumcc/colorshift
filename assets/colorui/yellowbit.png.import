@@ -1,0 +1,15 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+path="res://.import/yellowbit.png-20f708014f2f0bf182baea1ff8b0130f.res"
+
+[deps]
+
+source_file="res://assets/colorui/yellowbit.png"
+dest_files=[ "res://.import/yellowbit.png-20f708014f2f0bf182baea1ff8b0130f.res" ]
+
+[params]
+
+create_from=0
+threshold=0.5

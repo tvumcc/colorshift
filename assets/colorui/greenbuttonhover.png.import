@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/yellowbutton.png-728487dffcf55418e1afb156ec2382d7.stex"
+path="res://.import/greenbuttonhover.png-c255fc49858780387c78b833edd60260.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/colorui/buttonsprites/yellowbutton.png"
-dest_files=[ "res://.import/yellowbutton.png-728487dffcf55418e1afb156ec2382d7.stex" ]
+source_file="res://assets/colorui/greenbuttonhover.png"
+dest_files=[ "res://.import/greenbuttonhover.png-c255fc49858780387c78b833edd60260.stex" ]
 
 [params]
 
