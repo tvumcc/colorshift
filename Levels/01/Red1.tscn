@@ -56,9 +56,7 @@ texture = SubResource( 1 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Right-Wall"]
 collision_mask = 0
-__meta__ = {
-"_edit_lock_": true
-}
+collision/safe_margin = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right-Wall/KinematicBody2D"]
 shape = SubResource( 3 )
