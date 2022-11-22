@@ -25,6 +25,8 @@ func _physics_process(delta):
 		velocity.x = horizontal_speed
 	if Input.is_action_pressed('move_left'):
 		velocity.x = -horizontal_speed
+	if Input.is_action_pressed('restart'):
+		die()
 		
 	velocity.y += gravity * delta
 
@@ -36,4 +38,7 @@ func deathdec():
 		var collision := get_slide_collision(index)
 		var body := collision.collider
 		if body.is_in_group("deathbox"):
-			$"/root/Main".loadlevel($"/root/Main".get("levelpack"))
+			die()
+			
+func die():
+	$"/root/Main".loadlevel($"/root/Main".get("levelpack"))

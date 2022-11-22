@@ -8,6 +8,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
@@ -26,6 +27,7 @@ collision_mask = 0
 position = Vector2( 142, 467 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GODOT"]
+z_index = 2
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="GODOT"]

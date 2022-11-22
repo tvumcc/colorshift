@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Levels/01/Yellow1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/01/Blue1.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://icon.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 164, 4.5 )
 
 [node name="Level_01" type="Node2D"]
 script = ExtResource( 6 )
@@ -32,3 +35,16 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="RigidBody2D"]
 position = Vector2( 506, 37 )
 texture = ExtResource( 7 )
+
+[node name="Lava" type="KinematicBody2D" parent="." groups=["deathbox"]]
+
+[node name="ColorRect" type="ColorRect" parent="Lava"]
+margin_left = 664.0
+margin_top = 568.0
+margin_right = 992.0
+margin_bottom = 577.0
+color = Color( 1, 0.329412, 0, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lava"]
+position = Vector2( 828, 572.5 )
+shape = SubResource( 2 )
