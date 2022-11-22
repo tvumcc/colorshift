@@ -1,12 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Levels/01/Yellow1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/01/Blue1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/01/Purple1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/01/Red1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/01/Green1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/LevelProperties.gd" type="Script" id=6]
+[ext_resource path="res://icon.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="Level_01" type="Node2D"]
+script = ExtResource( 6 )
+startpos = Vector2( 500, 500 )
 
 [node name="Level_01_Red" parent="." instance=ExtResource( 4 )]
 
@@ -17,3 +23,12 @@
 [node name="Level_01_Blue" parent="." instance=ExtResource( 2 )]
 
 [node name="Level_01_Purple" parent="." instance=ExtResource( 3 )]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+position = Vector2( 506, 37 )
+texture = ExtResource( 7 )

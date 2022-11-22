@@ -102,3 +102,4 @@ func loadlevel(var newlevel):
 	colors[currentcolor].show()
 	
 	get_node(player).set_collision_mask_bit(currentcolor, true)
+	get_node(player).position = level.startpos

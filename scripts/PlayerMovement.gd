@@ -29,3 +29,11 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 
 	velocity = move_and_slide(velocity, Vector2(-1, -1))
+	deathdec()
+	
+func deathdec():
+	for index in get_slide_count():
+		var collision := get_slide_collision(index)
+		var body := collision.collider
+		if body.is_in_group("deathbox"):
+			$"/root/Main".loadlevel($"/root/Main".get("levelpack"))
