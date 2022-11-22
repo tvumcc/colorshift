@@ -29,9 +29,6 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/KinematicBody2D"]
 shape = SubResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Left-Wall" type="Sprite" parent="."]
 position = Vector2( 16, 285 )
@@ -83,6 +80,3 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/KinematicBody2D"]
 shape = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}

@@ -83,6 +83,3 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/KinematicBody2D"]
 shape = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}

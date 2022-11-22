@@ -4,12 +4,14 @@ extends KinematicBody2D
 var jump_speed = -900
 var horizontal_speed = 800
 var gravity = 2500
+var rotation_amount = .1  # in radians
 
 var velocity = Vector2()
 
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -23,6 +25,7 @@ func _physics_process(delta):
 		velocity.x = horizontal_speed
 	if Input.is_action_pressed('move_left'):
 		velocity.x = -horizontal_speed
+		
 	velocity.y += gravity * delta
 
-	velocity = move_and_slide(velocity, Vector2(0, -1))
+	velocity = move_and_slide(velocity, Vector2(-1, -1))

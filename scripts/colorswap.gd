@@ -29,12 +29,28 @@ func _process(delta):
 			colorwheel()
 			uiscene.hide()
 			
-	if Input.is_action_just_pressed("1"):
+	if Input.is_action_just_pressed("lvlz"):
 		loadlevel(levelexport[0])
 		print("aaa")
-	if Input.is_action_just_pressed("2"):
+	if Input.is_action_just_pressed("lvlx"):
 		loadlevel(levelexport[1])
 		print("bbb")
+	if Input.is_action_just_pressed("1"):
+		print("red1")
+		swapcolors(0)
+	if Input.is_action_just_pressed("2"):
+		print("yellow2")
+		swapcolors(1)
+	if Input.is_action_just_pressed("3"):
+		print("green3")
+		swapcolors(2)
+	if Input.is_action_just_pressed("4"):
+		print("blue4")
+		swapcolors(3)
+	if Input.is_action_just_pressed("5"):
+		print("purple5")
+		swapcolors(4)
+			
 
 func colorwheel(): 
 	#checks if a button is hovered over when shift is released and swaps to it if so

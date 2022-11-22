@@ -13,6 +13,7 @@ player = NodePath("Prism")
 
 [node name="Prism" parent="." instance=ExtResource( 1 )]
 position = Vector2( 442, 484 )
+scale = Vector2( 0.3, 0.3 )
 collision_layer = 31
 collision_mask = 0
 
