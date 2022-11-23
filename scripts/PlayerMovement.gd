@@ -28,7 +28,7 @@ func _physics_process(delta):
 		
 	velocity.y += gravity * delta
 
-	velocity = move_and_slide(velocity, Vector2(-1, -1))
+	velocity = move_and_slide(velocity, Vector2(0, -1))
 	collcheck()
 	
 func collcheck():
