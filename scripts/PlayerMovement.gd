@@ -29,11 +29,22 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 
 	velocity = move_and_slide(velocity, Vector2(-1, -1))
-	deathdec()
+	collcheck()
 	
-func deathdec():
+func collcheck():
 	for index in get_slide_count():
 		var collision := get_slide_collision(index)
 		var body := collision.collider
 		if body.is_in_group("deathbox"):
-			$"/root/Main".loadlevel($"/root/Main".get("levelpack"))
+			die()
+		elif body.is_in_group("endport"):
+			moveon()
+			
+func die():
+	#$"/root/Main".loadlevel($"/root/Main".get("levelpack"))
+	position = $"/root/Main".get("level").startpos
+
+func moveon():
+	# code to load next level
+	die() # testing purposes
+

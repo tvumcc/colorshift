@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Levels/02/Yellow1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/02/Blue1.tscn" type="PackedScene" id=2]
@@ -6,10 +6,14 @@
 [ext_resource path="res://Levels/02/Red1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/02/Green1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/LevelProperties.gd" type="Script" id=6]
+[ext_resource path="res://scripts/Endanimation.gd" type="Script" id=7]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 23.0
 
 [node name="Level_01" type="Node2D"]
 script = ExtResource( 6 )
-startpos = Vector2( 500, 500 )
+startpos = Vector2( 55, 500 )
 
 [node name="Level_01_Red2" parent="." instance=ExtResource( 4 )]
 
@@ -32,3 +36,17 @@ polygon = PoolVector2Array( 715, 568, 728, 547, 742, 566, 755, 547, 768, 567, 78
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spikes"]
 polygon = PoolVector2Array( 685, 568, 698, 547, 772, 549, 783, 568 )
+
+[node name="End" type="KinematicBody2D" parent="." groups=["endport"]]
+position = Vector2( 161, 210 )
+moving_platform_apply_velocity_on_leave = 2
+script = ExtResource( 7 )
+
+[node name="endCollisionShape" type="CollisionShape2D" parent="End"]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="End"]
+color = Color( 0.737255, 0.956863, 0.960784, 1 )
+offset = Vector2( -15, 15 )
+texture_rotation_degrees = -208.1
+polygon = PoolVector2Array( 0, 0, 0, -30, 30, -30, 30, 0 )
