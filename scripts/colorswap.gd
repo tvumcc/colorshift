@@ -6,6 +6,7 @@ var level # the instance of the current level
 
 var colors = [] # list of all the different colored rooms
 export(int) var currentcolor # current colored room
+var pointer
 
 export(NodePath) var player
 
@@ -17,24 +18,28 @@ func _ready():
 	levelpack = levelexport[0] # sets the PackedScene to the first object in level export
 	level = levelpack.instance() # instances the scene to not bug loadlevel
 	loadlevel(levelpack) # does sets up everything in using a PackedScene
+	pointer = uiscene.get_child(5)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	if Input.is_action_pressed("colorui"):#pulls up color wheel ui
-		wheelvis = true
 		uiscene.show()
-	if wheelvis == true:#if the color wheel ui is visible
-		if Input.is_action_just_released("colorui"): #change color based on hover when released
-			colorwheel()
-			uiscene.hide()
-			
+	if Input.is_action_just_released("colorui"): #change color based on hover when released
+		colorwheel()
+		uiscene.hide()
+	buttoninputs()
+	
 	if Input.is_action_just_pressed("lvlz"):
 		loadlevel(levelexport[0])
 		print("aaa")
 	if Input.is_action_just_pressed("lvlx"):
 		loadlevel(levelexport[1])
 		print("bbb")
+	
+	
+func buttoninputs():
 	if Input.is_action_just_pressed("1"):
 		print("red1")
 		swapcolors(0)
@@ -50,27 +55,28 @@ func _process(delta):
 	if Input.is_action_just_pressed("5"):
 		print("purple5")
 		swapcolors(4)
-			
 
 func colorwheel(): 
 	#checks if a button is hovered over when shift is released and swaps to it if so
-	if uiscene.get_child(0).is_hovered():
+	var r = pointer.rotation_degrees
+	print(r)
+	if uiscene.get_child(0).is_hovered() or (r > 0 and r < 75):
 		print("red")
 		swapcolors(0)
 		
-	if uiscene.get_child(1).is_hovered():
+	if uiscene.get_child(1).is_hovered() or (r > 75 and r < 145):
 		print("yellow")
 		swapcolors(1)
 		
-	if uiscene.get_child(2).is_hovered():
+	if uiscene.get_child(2).is_hovered() or (r > 145 and r < 215):
 		print("green")
 		swapcolors(2)
 		
-	if uiscene.get_child(3).is_hovered():
+	if uiscene.get_child(3).is_hovered() or (r > 215 and r < 275) or r < -72:
 		print("blue")
 		swapcolors(3)
 		
-	if uiscene.get_child(4).is_hovered():
+	if uiscene.get_child(4).is_hovered() or (r > -72 and r < 0):
 		print("purple")
 		swapcolors(4)
 
