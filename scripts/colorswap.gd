@@ -121,9 +121,9 @@ func get_lvl_index(var l):
 			
 
 func gonext(var oldlevel):
-	var toload = get_lvl_index(oldlevel)
-	var next = toload + 1
-	if next >= len(levelexport)-1:
+	print("a")
+	var next = get_lvl_index(oldlevel) + 1
+	if next > len(levelexport)-1:
 		print('overflow')
 		endgame()
 		return

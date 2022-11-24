@@ -5,6 +5,7 @@ var jump_speed = -900
 var horizontal_speed = 800
 var gravity = 2500
 var rotation_amount = .1  # in radians
+var wait = false
 
 var velocity = Vector2()
 
@@ -31,13 +32,15 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	collcheck()
 	
+	
 func collcheck():
 	for index in get_slide_count():
 		var collision := get_slide_collision(index)
 		var body := collision.collider
 		if body.is_in_group("deathbox"):
 			die()
-		elif body.is_in_group("endpoint"):
+		elif body.is_in_group("endpoint") and !wait:
+			wait = true
 			moveon()
 			
 func die():
@@ -47,3 +50,5 @@ func die():
 func moveon():
 	# code to load next level
 	$"/root/Main".gonext($"/root/Main".get("levelpack"))
+	yield(get_tree().create_timer(0.1), "timeout")
+	wait = false
