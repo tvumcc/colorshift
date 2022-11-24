@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var startpos = [548,460]
+export(Vector2) var startpos
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -12,8 +12,7 @@ func _ready():
 	goback()
 
 func goback():
-	position.x = startpos[0]
-	position.y = startpos[1]
+	position = startpos
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
