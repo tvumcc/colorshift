@@ -47,14 +47,17 @@ one_way_collision_margin = 0.0
 
 [node name="ui" parent="." instance=ExtResource( 5 )]
 
-[node name="GODOT" type="KinematicBody2D" parent="." groups=["deathbox"]]
+[node name="GODOT" type="KinematicBody2D" parent="."]
+physics_interpolation_mode = 2
 position = Vector2( 142, 467 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GODOT"]
+position = Vector2( 836, 17 )
 z_index = 2
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="GODOT"]
+position = Vector2( 837, 23 )
 texture = ExtResource( 6 )
 
 [connection signal="body_entered" from="Prism/Hand" to="Prism/Hand" method="_on_Hand_body_entered"]

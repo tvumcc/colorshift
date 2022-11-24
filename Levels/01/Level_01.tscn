@@ -10,7 +10,7 @@
 [ext_resource path="res://scripts/Endanimation.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 23.5, 27.5 )
+extents = Vector2( 37.5, 36.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 164, 4.5 )
@@ -39,7 +39,8 @@ collision_mask = 0
 mode = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2( -4.5, -4.5 )
+physics_interpolation_mode = 2
+position = Vector2( -1.5, 0.5 )
 z_index = 1
 shape = SubResource( 1 )
 
@@ -60,7 +61,7 @@ color = Color( 1, 0.329412, 0, 1 )
 position = Vector2( 828, 572.5 )
 shape = SubResource( 2 )
 
-[node name="End" type="KinematicBody2D" parent="." groups=["endport"]]
+[node name="End" type="KinematicBody2D" parent="." groups=["endpoint"]]
 position = Vector2( 229, 35 )
 moving_platform_apply_velocity_on_leave = 2
 script = ExtResource( 8 )

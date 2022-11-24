@@ -37,7 +37,7 @@ func collcheck():
 		var body := collision.collider
 		if body.is_in_group("deathbox"):
 			die()
-		elif body.is_in_group("endport"):
+		elif body.is_in_group("endpoint"):
 			moveon()
 			
 func die():
@@ -46,5 +46,4 @@ func die():
 
 func moveon():
 	# code to load next level
-	die() # testing purposes
-
+	$"/root/Main".gonext($"/root/Main".get("levelpack"))

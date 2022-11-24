@@ -37,7 +37,7 @@ polygon = PoolVector2Array( 715, 568, 728, 547, 742, 566, 755, 547, 768, 567, 78
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Spikes"]
 polygon = PoolVector2Array( 685, 568, 698, 547, 772, 549, 783, 568 )
 
-[node name="End" type="KinematicBody2D" parent="." groups=["endport"]]
+[node name="End" type="KinematicBody2D" parent="." groups=["endpoint"]]
 position = Vector2( 161, 210 )
 moving_platform_apply_velocity_on_leave = 2
 script = ExtResource( 7 )

@@ -11,11 +11,9 @@ var scale_spd = .1
 var scale_dir = 1
 var max_scale = 1.3
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

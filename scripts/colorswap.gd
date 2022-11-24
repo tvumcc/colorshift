@@ -104,9 +104,35 @@ func loadlevel(var newlevel):
 	for col in colors: # deactivates all colors
 		col.set_process(false)
 		col.hide()
-	colors[currentcolor].set_process(true) # sets a default color
-	colors[currentcolor].show()
+	colors[0].set_process(true) # sets a default color
+	colors[0].show()
 	
 	get_node(player).set_collision_mask_bit(currentcolor, true)
 	get_node(player).position = level.startpos
-	swapcolors(0)
+
+func get_lvl_index(var l):
+	var x = 0
+	for vl  in levelexport:
+		if l == vl:
+			return x
+		x += 1
+	# not in
+	return -1
+			
+
+func gonext(var oldlevel):
+	var toload = get_lvl_index(oldlevel)
+	var next = toload + 1
+	if next >= len(levelexport)-1:
+		print('overflow')
+		endgame()
+		return
+	print(next, levelexport[next])
+	loadlevel(levelexport[next])
+
+func endgame():
+	print('end of game')
+	get_tree().quit()
+	
+	
+	

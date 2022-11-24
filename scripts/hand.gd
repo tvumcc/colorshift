@@ -35,5 +35,4 @@ func _on_Hand_body_entered(body):
 	print(body)
 
 func _on_Hand_body_exited(body):
-	if !holding:
-		currentlytouched = false
+	currentlytouched = false
