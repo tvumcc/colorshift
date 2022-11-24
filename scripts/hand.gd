@@ -7,6 +7,7 @@ export(NodePath) var fasd
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var held = []
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,16 +22,21 @@ func _process(delta):
 	if !holding:
 		if Input.is_action_just_pressed("click") and currentlytouched:
 			holding = true
+			if not(item in held): held.append(item)
+			print(held)
 	else:
 		item.position = get_children()[0].global_position
 		if Input.is_action_just_pressed("click"):
 			holding = false
 			
 
-func drop():
-	if !holding:
-		return
-	if not(item.is_in_group('nogoingback')): item.goback()
+func dropall():
+	print('dropping all')
+	for it in held:
+		# send each item back
+		print('sending back ',it)
+		it.goback()
+	held = [] # reset held
 	holding = false
 
 func _on_Hand_body_entered(body):

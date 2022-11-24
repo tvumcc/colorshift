@@ -91,7 +91,8 @@ func swapcolors(var new):
 	currentcolor = new # updates current
 	
 func loadlevel(var newlevel):
-	$'Prism'.clearhand()
+	print('loading new level')
+	$'Prism'.dropallpicked()
 	
 	levelpack = newlevel # updates level
 	

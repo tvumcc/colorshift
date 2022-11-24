@@ -43,17 +43,18 @@ func collcheck():
 			wait = true
 			moveon()
 
-func clearhand():
-	$'Hand'.drop()
+func dropallpicked():
+	print('dropping all picked')
+	$'Hand'.dropall()
 			
 func die():
 	#$"/root/Main".loadlevel($"/root/Main".get("levelpack"))
-	clearhand()
+	dropallpicked()
 	position = $"/root/Main".get("level").startpos
 
 func moveon():
 	# code to load next level
-	clearhand()
+	dropallpicked()
 	$"/root/Main".gonext($"/root/Main".get("levelpack"))
 	yield(get_tree().create_timer(0.1), "timeout")
 	wait = false
