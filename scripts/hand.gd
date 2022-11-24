@@ -24,9 +24,14 @@ func _process(delta):
 	else:
 		item.position = get_children()[0].global_position
 		if Input.is_action_just_pressed("click"):
-			holding = false
+			drop()
+			
 
-
+func drop():
+	if !holding:
+		return
+	item.goback()
+	holding = false
 
 func _on_Hand_body_entered(body):
 	if !holding:

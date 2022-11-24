@@ -42,13 +42,18 @@ func collcheck():
 		elif body.is_in_group("endpoint") and !wait:
 			wait = true
 			moveon()
+
+func clearhand():
+	$'/root/Main/Prism/Hand'.drop()
 			
 func die():
 	#$"/root/Main".loadlevel($"/root/Main".get("levelpack"))
+	clearhand()
 	position = $"/root/Main".get("level").startpos
 
 func moveon():
 	# code to load next level
+	clearhand()
 	$"/root/Main".gonext($"/root/Main".get("levelpack"))
 	yield(get_tree().create_timer(0.1), "timeout")
 	wait = false

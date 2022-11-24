@@ -91,6 +91,8 @@ func swapcolors(var new):
 	currentcolor = new # updates current
 	
 func loadlevel(var newlevel):
+	$'Prism'.clearhand()
+	
 	levelpack = newlevel # updates level
 	
 	level.queue_free() # removes current level
@@ -104,8 +106,8 @@ func loadlevel(var newlevel):
 	for col in colors: # deactivates all colors
 		col.set_process(false)
 		col.hide()
-	colors[0].set_process(true) # sets a default color
-	colors[0].show()
+	colors[currentcolor].set_process(true) # sets a default color
+	colors[currentcolor].show()
 	
 	get_node(player).set_collision_mask_bit(currentcolor, true)
 	get_node(player).position = level.startpos
