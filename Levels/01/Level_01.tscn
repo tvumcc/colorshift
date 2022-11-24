@@ -33,7 +33,7 @@ startpos = Vector2( 55, 500 )
 
 [node name="Level_01_Purple" parent="." instance=ExtResource( 3 )]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="RigidBody2D" type="RigidBody2D" parent="." groups=["nogoingback"]]
 position = Vector2( 548, 460 )
 collision_layer = 32
 collision_mask = 0

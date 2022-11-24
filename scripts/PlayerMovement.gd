@@ -44,7 +44,7 @@ func collcheck():
 			moveon()
 
 func clearhand():
-	$'/root/Main/Prism/Hand'.drop()
+	$'Hand'.drop()
 			
 func die():
 	#$"/root/Main".loadlevel($"/root/Main".get("levelpack"))

@@ -30,7 +30,7 @@ func _process(delta):
 func drop():
 	if !holding:
 		return
-	item.goback()
+	if not(item.is_in_group('nogoingback')): item.goback()
 	holding = false
 
 func _on_Hand_body_entered(body):

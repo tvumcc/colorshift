@@ -9,7 +9,8 @@
 [ext_resource path="res://assets/itemcircle.png" type="Texture" id=7]
 [ext_resource path="res://scripts/hand.gd" type="Script" id=8]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=2]
+radius = 290.077
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -40,8 +41,7 @@ scale = Vector2( 3.33333, 3.33333 )
 texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Prism/Hand"]
-position = Vector2( 0, -150 )
-scale = Vector2( 1, 15 )
+position = Vector2( -0.00012207, 0 )
 shape = SubResource( 2 )
 one_way_collision_margin = 0.0
 
