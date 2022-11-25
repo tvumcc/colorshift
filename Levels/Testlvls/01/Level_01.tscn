@@ -21,6 +21,7 @@ radius = 23.0
 
 [node name="Level_01" type="Node2D"]
 script = ExtResource( 6 )
+bounds = PoolIntArray( 0, -10000, 10000, 600 )
 startpos = Vector2( 55, 500 )
 
 [node name="Level_01_Red" parent="." instance=ExtResource( 4 )]

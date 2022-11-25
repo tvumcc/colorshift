@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Prism.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Testlvls/01/Level_01.tscn" type="PackedScene" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://icon.png" type="Texture" id=6]
 [ext_resource path="res://assets/itemcircle.png" type="Texture" id=7]
 [ext_resource path="res://scripts/hand.gd" type="Script" id=8]
+[ext_resource path="res://scripts/camscript.gd" type="Script" id=9]
+[ext_resource path="res://Levels/Main/end.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Levels/Main/start.tscn" type="PackedScene" id=11]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 290.077
@@ -17,7 +20,7 @@ extents = Vector2( 32, 32 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 3 )
-levelexport = [ ExtResource( 2 ), ExtResource( 4 ) ]
+levelexport = [ ExtResource( 11 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 10 ) ]
 player = NodePath("Prism")
 
 [node name="Prism" parent="." groups=["Player"] instance=ExtResource( 1 )]
@@ -44,6 +47,15 @@ texture = ExtResource( 7 )
 position = Vector2( -0.00012207, 0 )
 shape = SubResource( 2 )
 one_way_collision_margin = 0.0
+
+[node name="camera" type="Camera2D" parent="Prism"]
+scale = Vector2( 3.33333, 3.33333 )
+current = true
+limit_left = 0
+limit_bottom = 600
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource( 9 )
 
 [node name="ui" parent="." instance=ExtResource( 5 )]
 

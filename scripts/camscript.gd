@@ -1,12 +1,7 @@
-extends Node2D
+extends Camera2D
 
-export(PoolIntArray) var bounds
 
-export(Vector2) var startpos
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var playerpos
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,5 +9,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	pass
+
+func rebound(var bounds):
+	limit_left = bounds[0]
+	limit_top = bounds[1]
+	limit_right = bounds[2]
+	limit_bottom = bounds[3]

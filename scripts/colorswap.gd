@@ -40,6 +40,8 @@ func _process(delta):
 	
 	
 func buttoninputs():
+	if Input.is_action_just_pressed("restart"):
+		loadlevel(levelpack)
 	if Input.is_action_just_pressed("1"):
 		print("red1")
 		swapcolors(0)
@@ -98,7 +100,12 @@ func loadlevel(var newlevel):
 	level.queue_free() # removes current level
 	level = levelpack.instance() # instantiates the level and sets level to that
 	add_child(level) # adds it as a child of main
-	
+	if get_lvl_index(newlevel) in [0,len(levelexport)-1]:
+		#ui-scene
+		### testing part
+		gonext(newlevel)
+		###
+		return
 	colors.clear() # resets colors list
 	for i in range(5): # gets colors from level children
 		colors.append(level.get_child(i))
@@ -111,6 +118,7 @@ func loadlevel(var newlevel):
 	
 	get_node(player).set_collision_mask_bit(currentcolor, true)
 	get_node(player).position = level.startpos
+	$'Prism/camera'.rebound(level.bounds)
 
 func get_lvl_index(var l):
 	var x = 0
@@ -136,5 +144,5 @@ func endgame():
 	print('end of game')
 	get_tree().quit()
 	
-	
+
 	
