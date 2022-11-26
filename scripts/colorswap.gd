@@ -23,7 +23,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	uiscene.position = $"/root/Main/Prism/camera".get_camera_screen_center() + Vector2(-249,-243)
 	if Input.is_action_pressed("colorui"):#pulls up color wheel ui
 		uiscene.show()
 	if Input.is_action_just_released("colorui"): #change color based on hover when released
