@@ -13,6 +13,7 @@ export(NodePath) var player
 var wheelvis = false
 onready var uiscene = get_node("/root/Colorpickerui/buttons")
 
+var isui = false
 # Called when the node enters the scene tree for the first time.
 func _ready():	
 	levelpack = levelexport[0] # sets the PackedScene to the first object in level export
@@ -40,7 +41,7 @@ func _process(delta):
 	
 	
 func buttoninputs():
-	if Input.is_action_just_pressed("restart"):
+	if Input.is_action_just_pressed("reset"):
 		loadlevel(levelpack)
 	if Input.is_action_just_pressed("1"):
 		print("red1")
@@ -83,6 +84,8 @@ func colorwheel():
 		swapcolors(4)
 
 func swapcolors(var new):
+	if isui:
+		return
 	colors[currentcolor].set_process(false) #deactivates scripts on old color
 	colors[currentcolor].hide() # hides old color
 	get_node(player).set_collision_mask_bit(currentcolor, false)
@@ -93,6 +96,7 @@ func swapcolors(var new):
 	currentcolor = new # updates current
 	
 func loadlevel(var newlevel):
+	isui = false
 	$'Prism'.clearhand()
 	
 	levelpack = newlevel # updates level
@@ -101,9 +105,10 @@ func loadlevel(var newlevel):
 	level = levelpack.instance() # instantiates the level and sets level to that
 	add_child(level) # adds it as a child of main
 	if get_lvl_index(newlevel) in [0,len(levelexport)-1]:
+		isui = true
 		#ui-scene
 		### testing part
-		gonext(newlevel)
+		#gonext(newlevel)
 		###
 		return
 	colors.clear() # resets colors list
@@ -143,6 +148,14 @@ func gonext(var oldlevel):
 func endgame():
 	print('end of game')
 	get_tree().quit()
+	
+func getsp():
+	return level.startpos
+
+func setsp(var pos):
+	print('changed startpos ', level.startpos, pos)
+	level.startpos = pos
+	
 	
 
 	

@@ -6,6 +6,7 @@ var horizontal_speed = 800
 var gravity = 2500
 var rotation_amount = .1  # in radians
 var wait = false
+onready var main = get_node('/root/Main')
 
 var velocity = Vector2()
 
@@ -16,7 +17,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	collcheck()
 	
 		
 func _physics_process(delta):
@@ -27,14 +28,16 @@ func _physics_process(delta):
 		velocity.x = horizontal_speed
 	if Input.is_action_pressed('move_left'):
 		velocity.x = -horizontal_speed
-		
+	if Input.is_action_just_pressed('restart'):
+		die()
 	velocity.y += gravity * delta
 
 	velocity = move_and_slide(velocity, Vector2(0, -1))
-	collcheck()
 	
 	
 func collcheck():
+	if wait:
+		return
 	for index in get_slide_count():
 		var collision := get_slide_collision(index)
 		var body := collision.collider
@@ -43,6 +46,7 @@ func collcheck():
 		elif body.is_in_group("endpoint") and !wait:
 			wait = true
 			moveon()
+			
 
 func clearhand():
 	$'Hand'.drop()
@@ -50,11 +54,12 @@ func clearhand():
 func die():
 	#$"/root/Main".loadlevel($"/root/Main".get("levelpack"))
 	clearhand()
-	position = $"/root/Main".get("level").startpos
+	position = main.get("level").startpos
+	print('died')
 
 func moveon():
 	# code to load next level
 	clearhand()
-	$"/root/Main".gonext($"/root/Main".get("levelpack"))
+	main.gonext(main.get("levelpack"))
 	yield(get_tree().create_timer(0.1), "timeout")
 	wait = false

@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/Endanimation.gd" type="Script" id=1]
+[ext_resource path="res://scripts/LevelProperties.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 23.0
+
+[node name="Control" type="Node2D"]
+script = ExtResource( 2 )
+startpos = Vector2( 78, 513 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 26.0
+margin_top = 38.0
+margin_right = 988.0
+margin_bottom = 492.0
+meta_underlined = false
+text = "_name_
+You are a mystical triangle being that moves through the colors of light as through dimensions. You can control what you see and interact with at a time. What you cannot see cannot hurt you.
+
+Use the Arrow Keys or WASD to move through the world.
+Use keys 1-5, shift + mouse, or rightclick+mouse to change colors.
+Click or press E to pick up/put down items around you; items will get picked up from anywhere within the circle's reach (even if not within) and will be put down within the circle. 
+Press R to respawn.
+Press T to reset the entire level.
+
+Use your inherent intelligence, creativity, and skill to succeed in each level.
+Good luck?
+"
+scroll_active = false
+
+[node name="End" type="KinematicBody2D" parent="." groups=["endpoint"]]
+position = Vector2( 973, 556 )
+moving_platform_apply_velocity_on_leave = 2
+script = ExtResource( 1 )
+
+[node name="endCollisionShape" type="CollisionShape2D" parent="End"]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="End"]
+color = Color( 0.737255, 0.956863, 0.960784, 1 )
+offset = Vector2( -15, 15 )
+texture_rotation_degrees = -208.1
+polygon = PoolVector2Array( 0, 0, 0, -30, 30, -30, 30, 0 )
