@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/colors/colorscheme.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 200, 0, 199, 200 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 447, 10 )
+
+[node name="Neutralspace" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1002.12, 715 )
+scale = Vector2( 1.7701, 0.14 )
+texture = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Sprite"]
+position = Vector2( 0.249374, 0 )
+scale = Vector2( 0.223153, 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/KinematicBody2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 1163.24, 639.938 )
+scale = Vector2( 0.143068, 0.890625 )
+texture = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Sprite4"]
+position = Vector2( 0.249374, 0 )
+scale = Vector2( 0.223153, 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite4/KinematicBody2D"]
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 1110, 541.594 )
+scale = Vector2( 0.673366, 0.124063 )
+texture = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Sprite5"]
+position = Vector2( 0.249374, 0 )
+scale = Vector2( 0.223153, 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite5/KinematicBody2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 842, 626.019 )
+scale = Vector2( 0.150752, 0.827813 )
+texture = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Sprite6"]
+position = Vector2( 0.249374, 0 )
+scale = Vector2( 0.223153, 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite6/KinematicBody2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 891.634, 541.5 )
+scale = Vector2( 0.646894, 0.125 )
+texture = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Sprite7"]
+scale = Vector2( 0.223153, 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite7/KinematicBody2D"]
+shape = SubResource( 2 )

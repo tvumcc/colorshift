@@ -1,0 +1,1430 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Levels/tyler's level/Red.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Endanimation.gd" type="Script" id=2]
+[ext_resource path="res://Levels/tyler's level/Yellow.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/tyler's level/Green.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/tyler's level/Blue.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/tyler's level/Purple.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/tyler's level/Neutralspace.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/colors/colorscheme.png" type="Texture" id=8]
+[ext_resource path="res://scripts/LevelProperties.gd" type="Script" id=9]
+[ext_resource path="res://assets/colors/lava.PNG" type="Texture" id=10]
+[ext_resource path="res://scripts/movingplatform.gd" type="Script" id=11]
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 200, 200, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 100.5, 100 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 200, 200, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 9.95584e+06, 9.98948e+06 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 200, 400, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 100, 100 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 200, 600, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 100, 100 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 200, 800, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 100.405, 100 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 200, 1000, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 100, 100 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 200, 0, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 100, 99.9422 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 122.479, 121.614 )
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 23.0
+
+[node name="Level_\?\?\?\?" type="Node2D"]
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+bounds = PoolIntArray( 0, -10000, 10000, 10000 )
+startpos = Vector2( 834, 0 )
+
+[node name="Red" parent="." instance=ExtResource( 1 )]
+
+[node name="Node2D" type="Node2D" parent="Red"]
+
+[node name="redblock" type="Sprite" parent="Red/Node2D"]
+position = Vector2( 955, 59.75 )
+scale = Vector2( 0.0899997, 2.4875 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D/redblock"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/redblock/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="redblock2" type="Sprite" parent="Red/Node2D"]
+position = Vector2( 1045.75, 248.125 )
+scale = Vector2( 0.472499, 0.10375 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D/redblock2"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/redblock2/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="redblock3" type="Sprite" parent="Red/Node2D"]
+position = Vector2( 1045.5, 132.375 )
+scale = Vector2( 0.472499, 0.10375 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D/redblock3"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/redblock3/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="redblock5" type="Sprite" parent="Red/Node2D"]
+position = Vector2( 1406.69, -64 )
+scale = Vector2( 0.133124, 0.44 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D/redblock5"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/redblock5/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Red/Node2D"]
+position = Vector2( 769, 600 )
+rotation = 3.14159
+scale = Vector2( 0.310497, 0.114058 )
+texture = SubResource( 15 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D/Sprite"]
+rotation = -3.14159
+scale = Vector2( 1e-05, 1e-05 )
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/Sprite/KinematicBody2D"]
+position = Vector2( -12050, 32656 )
+shape = SubResource( 16 )
+
+[node name="redblock6" type="Sprite" parent="Red/Node2D"]
+position = Vector2( 1202, 921 )
+scale = Vector2( 0.966562, 0.145 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D/redblock6"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/redblock6/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="redblock7" type="Sprite" parent="Red/Node2D"]
+position = Vector2( 975.828, 920 )
+scale = Vector2( 0.518281, 0.145 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D/redblock7"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/redblock7/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="redblock8" type="Sprite" parent="Red/Node2D"]
+position = Vector2( 1013.83, 832.25 )
+scale = Vector2( 0.13828, 1.0225 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D/redblock8"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/redblock8/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="redblock9" type="Sprite" parent="Red/Node2D"]
+position = Vector2( 1285, 832 )
+scale = Vector2( 0.13828, 1.0225 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D/redblock9"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/redblock9/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="redblock10" type="Sprite" parent="Red/Node2D"]
+position = Vector2( 981, 1039 )
+scale = Vector2( 0.3, 0.15 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D/redblock10"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/redblock10/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Red/Node2D"]
+position = Vector2( 765, 775 )
+scale = Vector2( 0.5, 0.15 )
+collision_mask = 0
+script = ExtResource( 11 )
+point1 = Vector2( 765, 775 )
+point2 = Vector2( 765, 1175 )
+
+[node name="redblock11" type="Sprite" parent="Red/Node2D/KinematicBody2D"]
+texture = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="KinematicBody2D2" type="KinematicBody2D" parent="Red/Node2D"]
+position = Vector2( 675, 420 )
+scale = Vector2( 0.5, 0.15 )
+collision_mask = 0
+script = ExtResource( 11 )
+point1 = Vector2( 675, 420 )
+point2 = Vector2( 275, 420 )
+
+[node name="redblock11" type="Sprite" parent="Red/Node2D/KinematicBody2D2"]
+texture = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red/Node2D/KinematicBody2D2"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="Yellow" parent="." instance=ExtResource( 3 )]
+
+[node name="Node2D" type="Node2D" parent="Yellow"]
+
+[node name="yellowblock2" type="Sprite" parent="Yellow/Node2D"]
+position = Vector2( 785, 482 )
+scale = Vector2( 0.305, 0.13 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D/yellowblock2"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/yellowblock2/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="yellowblock" type="Sprite" parent="Yellow/Node2D"]
+position = Vector2( 942, 354 )
+scale = Vector2( 0.305, 0.137187 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D/yellowblock"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/yellowblock/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="yellowblock3" type="Sprite" parent="Yellow/Node2D"]
+position = Vector2( 955, 59.225 )
+scale = Vector2( 0.09, 2.49225 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D/yellowblock3"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/yellowblock3/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="yellowblock4" type="Sprite" parent="Yellow/Node2D"]
+position = Vector2( 867.313, -87.125 )
+scale = Vector2( 0.464375, 0.105 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D/yellowblock4"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/yellowblock4/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="yellowblock5" type="Sprite" parent="Yellow/Node2D"]
+position = Vector2( 867.75, -197.625 )
+scale = Vector2( 0.464375, 0.105 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D/yellowblock5"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/yellowblock5/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="yellowblock6" type="Sprite" parent="Yellow/Node2D"]
+position = Vector2( 1310.22, 114.25 )
+scale = Vector2( 0.402187, 0.1325 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D/yellowblock6"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/yellowblock6/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="yellowblock7" type="Sprite" parent="Yellow/Node2D"]
+position = Vector2( 1305.95, 18.0625 )
+scale = Vector2( 0.490523, 0.110625 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D/yellowblock7"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/yellowblock7/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="yellowblock8" type="Sprite" parent="Yellow/Node2D"]
+position = Vector2( 1406.89, -63.9375 )
+scale = Vector2( 0.131094, 0.440625 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D/yellowblock8"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/yellowblock8/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="yellowblock10" type="Sprite" parent="Yellow/Node2D"]
+position = Vector2( 1161, 1039 )
+scale = Vector2( 0.3, 0.15 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D/yellowblock10"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/yellowblock10/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="yellowblock11" type="Sprite" parent="Yellow/Node2D"]
+position = Vector2( 1461, 1039 )
+scale = Vector2( 0.3, 0.15 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D/yellowblock11"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/yellowblock11/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Yellow/Node2D"]
+position = Vector2( 676, 15 )
+scale = Vector2( 0.5, 0.15 )
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 11 )
+point1 = Vector2( 675, 15 )
+point2 = Vector2( 275, 15 )
+
+[node name="yellowblock9" type="Sprite" parent="Yellow/Node2D/KinematicBody2D"]
+texture = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow/Node2D/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="Green" parent="." instance=ExtResource( 4 )]
+
+[node name="Node2D" type="Node2D" parent="Green"]
+
+[node name="greenblock" type="Sprite" parent="Green/Node2D"]
+position = Vector2( 999, 451 )
+scale = Vector2( 0.325, 0.12 )
+texture = SubResource( 6 )
+offset = Vector2( 0, 1.04102 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Green/Node2D/greenblock"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/greenblock/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="greenblock2" type="Sprite" parent="Green/Node2D"]
+position = Vector2( 834.5, -56.125 )
+scale = Vector2( 0.135, 1.425 )
+texture = SubResource( 6 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Green/Node2D/greenblock2"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/greenblock2/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="greenblock3" type="Sprite" parent="Green/Node2D"]
+position = Vector2( 1289.5, 388 )
+scale = Vector2( 0.325, 0.12 )
+texture = SubResource( 6 )
+offset = Vector2( 0, 1.04102 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Green/Node2D/greenblock3"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/greenblock3/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="greenblock4" type="Sprite" parent="Green/Node2D"]
+position = Vector2( 1319, 387.839 )
+scale = Vector2( 0.115, 0.635 )
+texture = SubResource( 6 )
+offset = Vector2( 0, 1.04102 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Green/Node2D/greenblock4"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/greenblock4/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="greenblock5" type="Sprite" parent="Green/Node2D"]
+position = Vector2( 1406.75, -64.3784 )
+scale = Vector2( 0.1325, 0.440805 )
+texture = SubResource( 6 )
+offset = Vector2( 0, 1.04102 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Green/Node2D/greenblock5"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/greenblock5/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="greenblock6" type="Sprite" parent="Green/Node2D"]
+position = Vector2( 1457, 921 )
+scale = Vector2( 0.7575, 0.139375 )
+texture = SubResource( 6 )
+offset = Vector2( 0, 1.04102 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Green/Node2D/greenblock6"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/greenblock6/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="greenblock7" type="Sprite" parent="Green/Node2D"]
+position = Vector2( 1503, 817 )
+scale = Vector2( 0.2925, 0.139375 )
+texture = SubResource( 6 )
+offset = Vector2( 0, 1.04102 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Green/Node2D/greenblock7"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/greenblock7/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="greenblock8" type="Sprite" parent="Green/Node2D"]
+position = Vector2( 1312.13, 839.35 )
+scale = Vector2( 0.12875, 1.105 )
+texture = SubResource( 6 )
+offset = Vector2( 0, 1.04102 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Green/Node2D/greenblock8"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/greenblock8/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="greenblock9" type="Sprite" parent="Green/Node2D"]
+position = Vector2( 1041, 1039 )
+scale = Vector2( 0.3, 0.15 )
+texture = SubResource( 6 )
+offset = Vector2( 0, 1.04102 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Green/Node2D/greenblock9"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/greenblock9/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Green/Node2D"]
+position = Vector2( 615, 1175 )
+scale = Vector2( 0.5, 0.15 )
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 11 )
+point1 = Vector2( 615, 1175 )
+point2 = Vector2( 615, 775 )
+
+[node name="greenblock10" type="Sprite" parent="Green/Node2D/KinematicBody2D"]
+texture = SubResource( 6 )
+offset = Vector2( 0, 1.04102 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="KinematicBody2D2" type="KinematicBody2D" parent="Green/Node2D"]
+position = Vector2( 570, 85 )
+scale = Vector2( 0.5, 0.15 )
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 11 )
+point1 = Vector2( 675, 85 )
+point2 = Vector2( 275, 85 )
+
+[node name="greenblock10" type="Sprite" parent="Green/Node2D/KinematicBody2D2"]
+texture = SubResource( 6 )
+offset = Vector2( 0, 1.04102 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green/Node2D/KinematicBody2D2"]
+shape = SubResource( 7 )
+
+[node name="Blue" parent="." instance=ExtResource( 5 )]
+
+[node name="Node2D" type="Node2D" parent="Blue"]
+
+[node name="blueblock" type="Sprite" parent="Blue/Node2D"]
+position = Vector2( 1222, 481 )
+scale = Vector2( 0.3275, 0.13 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D/blueblock"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="blueblock2" type="Sprite" parent="Blue/Node2D"]
+position = Vector2( 955, 60.225 )
+scale = Vector2( 0.09, 2.48225 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D/blueblock2"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock2/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="blueblock3" type="Sprite" parent="Blue/Node2D"]
+position = Vector2( 865.75, 80.375 )
+scale = Vector2( 0.46375, 0.11 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D/blueblock3"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock3/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="blueblock4" type="Sprite" parent="Blue/Node2D"]
+position = Vector2( 1456.56, 434 )
+scale = Vector2( 0.444375, 0.13 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D/blueblock4"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock4/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="blueblock5" type="Sprite" parent="Blue/Node2D"]
+position = Vector2( 1521, 165 )
+scale = Vector2( 0.149532, 0.5075 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D/blueblock5"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock5/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="blueblock6" type="Sprite" parent="Blue/Node2D"]
+position = Vector2( 1158, 210 )
+scale = Vector2( 0.46375, 0.11 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D/blueblock6"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock6/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="blueblock7" type="Sprite" parent="Blue/Node2D"]
+position = Vector2( 1364.59, -63.25 )
+scale = Vector2( 0.105938, 0.4725 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D/blueblock7"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock7/KinematicBody2D"]
+position = Vector2( -1.84082, 0 )
+shape = SubResource( 9 )
+
+[node name="blueblock9" type="Sprite" parent="Blue/Node2D"]
+position = Vector2( 1481, 649 )
+scale = Vector2( 0.499374, 0.1375 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D/blueblock9"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock9/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="blueblock10" type="Sprite" parent="Blue/Node2D"]
+position = Vector2( 1101, 1039 )
+scale = Vector2( 0.3, 0.15 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D/blueblock10"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock10/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="blueblock11" type="Sprite" parent="Blue/Node2D"]
+position = Vector2( 1401, 1039 )
+scale = Vector2( 0.3, 0.15 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D/blueblock11"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock11/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Blue/Node2D"]
+position = Vector2( 465, 775 )
+scale = Vector2( 0.5, 0.15 )
+collision_layer = 8
+collision_mask = 0
+script = ExtResource( 11 )
+point1 = Vector2( 465, 775 )
+point2 = Vector2( 465, 1175 )
+
+[node name="blueblock12" type="Sprite" parent="Blue/Node2D/KinematicBody2D"]
+texture = SubResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="KinematicBody2D2" type="KinematicBody2D" parent="Blue/Node2D"]
+position = Vector2( 275, 320 )
+scale = Vector2( 0.5, 0.15 )
+collision_layer = 8
+collision_mask = 0
+script = ExtResource( 11 )
+point1 = Vector2( 275, 320 )
+point2 = Vector2( 675, 320 )
+
+[node name="blueblock12" type="Sprite" parent="Blue/Node2D/KinematicBody2D2"]
+texture = SubResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/KinematicBody2D2"]
+shape = SubResource( 9 )
+
+[node name="Purple" parent="." instance=ExtResource( 6 )]
+
+[node name="Node2D" type="Node2D" parent="Purple"]
+
+[node name="purpleblock" type="Sprite" parent="Purple/Node2D"]
+position = Vector2( 1302, 590 )
+scale = Vector2( 0.347499, 0.155 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D/purpleblock"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/purpleblock/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="purpleblock2" type="Sprite" parent="Purple/Node2D"]
+position = Vector2( 955, 59.225 )
+scale = Vector2( 0.09, 2.49225 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D/purpleblock2"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/purpleblock2/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="purpleblock3" type="Sprite" parent="Purple/Node2D"]
+position = Vector2( 1045.75, -38.625 )
+scale = Vector2( 0.47, 0.09425 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D/purpleblock3"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/purpleblock3/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="purpleblock4" type="Sprite" parent="Purple/Node2D"]
+position = Vector2( 1406.5, -63.7875 )
+scale = Vector2( 0.135, 0.442125 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D/purpleblock4"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/purpleblock4/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="purpleblock5" type="Sprite" parent="Purple/Node2D"]
+position = Vector2( 1417.88, 768.75 )
+scale = Vector2( 0.128749, 0.3925 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D/purpleblock5"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/purpleblock5/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="purpleblock6" type="Sprite" parent="Purple/Node2D"]
+position = Vector2( 1365, 816 )
+scale = Vector2( 0.664375, 0.125 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D/purpleblock6"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/purpleblock6/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="purpleblock7" type="Sprite" parent="Purple/Node2D"]
+position = Vector2( 1312, 879.625 )
+scale = Vector2( 0.128749, 0.72375 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D/purpleblock7"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/purpleblock7/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="purpleblock8" type="Sprite" parent="Purple/Node2D"]
+position = Vector2( 1221, 1039 )
+scale = Vector2( 0.3, 0.15 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D/purpleblock8"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/purpleblock8/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="purpleblock9" type="Sprite" parent="Purple/Node2D"]
+position = Vector2( 1341, 1039 )
+scale = Vector2( 0.3, 0.15 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D/purpleblock9"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/purpleblock9/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="purpleblock10" type="Sprite" parent="Purple/Node2D"]
+position = Vector2( 1521, 1039 )
+scale = Vector2( 0.3, 0.15 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D/purpleblock10"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/purpleblock10/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Purple/Node2D"]
+position = Vector2( 315, 1175 )
+scale = Vector2( 0.5, 0.15 )
+collision_layer = 16
+collision_mask = 0
+script = ExtResource( 11 )
+point1 = Vector2( 315, 1175 )
+point2 = Vector2( 315, 775 )
+
+[node name="purpleblock11" type="Sprite" parent="Purple/Node2D/KinematicBody2D"]
+texture = SubResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="KinematicBody2D2" type="KinematicBody2D" parent="Purple/Node2D"]
+position = Vector2( 470, 155 )
+scale = Vector2( 0.5, 0.15 )
+collision_layer = 16
+collision_mask = 0
+script = ExtResource( 11 )
+point1 = Vector2( 675, 155 )
+point2 = Vector2( 275, 155 )
+
+[node name="purpleblock11" type="Sprite" parent="Purple/Node2D/KinematicBody2D2"]
+texture = SubResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Purple/Node2D/KinematicBody2D2"]
+shape = SubResource( 11 )
+
+[node name="Neutralspace" parent="." instance=ExtResource( 7 )]
+
+[node name="Node2D" type="Node2D" parent="Neutralspace"]
+
+[node name="neutralblock3" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 839.5, 286.5 )
+scale = Vector2( 0.385, 0.0937501 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock3"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock3/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock2" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1105, 57.5 )
+scale = Vector2( 0.12, 2.49125 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock2"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock2/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 807, -21.25 )
+scale = Vector2( 0.12, 3.16375 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock4" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 822.75, 80.375 )
+scale = Vector2( 0.2275, 0.0937501 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock4"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock4/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock6" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1032.5, -201.125 )
+scale = Vector2( 0.855, 0.10875 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock6"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock6/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock7" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 959.687, -278.156 )
+scale = Vector2( 0.123125, 0.728438 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock7"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock7/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock8" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 883, -347.625 )
+scale = Vector2( 0.88, 0.10375 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock8"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock8/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock9" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 841, 399 )
+scale = Vector2( 0.385, 0.0937501 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock9"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock9/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock10" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1349.25, 311.688 )
+scale = Vector2( 0.4275, 0.126875 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock10"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock10/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock11" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1407, 152.094 )
+scale = Vector2( 0.145, 1.72094 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock11"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock11/KinematicBody2D"]
+position = Vector2( 0, -0.0577621 )
+shape = SubResource( 13 )
+
+[node name="neutralblock12" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1519.88, 270.922 )
+scale = Vector2( 0.145, 0.559219 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock12"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock12/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock13" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1372.63, 114 )
+scale = Vector2( 0.213751, 0.152305 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock13"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock13/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock14" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1519.88, 3.46094 )
+scale = Vector2( 0.145, 1.11461 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock14"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock14/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock15" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1322.5, -122.27 )
+scale = Vector2( 2.115, 0.137305 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock15"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock15/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock16" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1623, 602.961 )
+scale = Vector2( 0.145, 1.29961 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock16"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock16/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock17" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1585.75, 486.5 )
+scale = Vector2( 0.517501, 0.135 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock17"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock17/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock18" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1598.13, 747 )
+scale = Vector2( 0.648751, 0.135 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock18"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock18/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock19" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1548, 857.875 )
+scale = Vector2( 0.148751, 1.23125 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock19"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock19/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock20" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1166.38, 844 )
+scale = Vector2( 0.343751, 0.135 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock20"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock20/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock21" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1138, 793 )
+scale = Vector2( 0.148751, 0.64625 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock21"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock21/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock22" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 852, 955.875 )
+scale = Vector2( 0.148751, 2.27125 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock22"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock22/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock23" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 850.859, 1197 )
+scale = Vector2( 7.1386, 0.150625 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock23"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock23/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock24" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 928, 1039 )
+scale = Vector2( 0.228594, 0.150625 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock24"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock24/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock25" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1550, 1102.81 )
+scale = Vector2( 0.148751, 0.788124 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock25"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock25/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock26" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 873, 1113 )
+scale = Vector2( 0.228594, 0.150625 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock26"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock26/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock27" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1281, 1039 )
+scale = Vector2( 0.3, 0.15 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock27"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock27/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock28" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 943.5, 969.5 )
+scale = Vector2( 0.0149997, 0.135 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock28"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock28/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock29" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1550, 1102.81 )
+scale = Vector2( 0.148751, 0.788124 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock29"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock29/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock30" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1677, 890.406 )
+scale = Vector2( 0.148751, 1.57406 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock30"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock30/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock31" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1628.56, 1038 )
+scale = Vector2( 0.644376, 0.135 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock31"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock31/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock32" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1663, 938 )
+scale = Vector2( 0.228594, 0.150625 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock32"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock32/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock33" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 121, 422.563 )
+scale = Vector2( 0.148751, 7.89563 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock33"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock33/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock34" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 817, 1064 )
+scale = Vector2( 0.228594, 0.150625 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock34"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock34/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock35" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 164, 1024 )
+scale = Vector2( 0.228594, 0.150625 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock35"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock35/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock36" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 407, 718 )
+scale = Vector2( 2.71715, 0.150625 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock36"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock36/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock37" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 472, 234 )
+scale = Vector2( 0.705, 0.150625 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock37"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock37/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="deathblocks" type="Node2D" parent="Neutralspace"]
+
+[node name="lava" type="Sprite" parent="Neutralspace/deathblocks"]
+position = Vector2( 1519.5, 401 )
+scale = Vector2( 0.110204, 0.604082 )
+texture = ExtResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/deathblocks/lava" groups=["deathbox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/deathblocks/lava/KinematicBody2D"]
+position = Vector2( 0, 0.29541 )
+shape = SubResource( 14 )
+
+[node name="lava2" type="Sprite" parent="Neutralspace/deathblocks"]
+position = Vector2( 1469, 487 )
+scale = Vector2( 0.530612, 0.0984983 )
+texture = ExtResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/deathblocks/lava2" groups=["deathbox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/deathblocks/lava2/KinematicBody2D"]
+position = Vector2( 0, 0.29541 )
+shape = SubResource( 14 )
+
+[node name="lava4" type="Sprite" parent="Neutralspace/deathblocks"]
+position = Vector2( 1416.5, 676.878 )
+scale = Vector2( 0.110204, 0.366352 )
+texture = ExtResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/deathblocks/lava4" groups=["deathbox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/deathblocks/lava4/KinematicBody2D"]
+position = Vector2( 0, 0.29541 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 14 )
+
+[node name="lava5" type="Sprite" parent="Neutralspace/deathblocks"]
+position = Vector2( 1304.5, 717.411 )
+scale = Vector2( 1.02449, 0.0931492 )
+texture = ExtResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/deathblocks/lava5" groups=["deathbox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/deathblocks/lava5/KinematicBody2D"]
+position = Vector2( 0, 0.29541 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 14 )
+
+[node name="lava6" type="Sprite" parent="Neutralspace/deathblocks"]
+position = Vector2( 1238.5, 969.5 )
+scale = Vector2( 2.41225, 0.102041 )
+texture = ExtResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/deathblocks/lava6" groups=["deathbox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/deathblocks/lava6/KinematicBody2D"]
+position = Vector2( -0.0210571, -0.884766 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 14 )
+
+[node name="lava7" type="Sprite" parent="Neutralspace/deathblocks"]
+position = Vector2( 487, 1166 )
+scale = Vector2( 2.83878, 0.102041 )
+texture = ExtResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/deathblocks/lava7" groups=["deathbox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/deathblocks/lava7/KinematicBody2D"]
+position = Vector2( -0.0210571, -0.884766 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 14 )
+
+[node name="End" type="KinematicBody2D" parent="." groups=["endpoint"]]
+position = Vector2( 1000, 635 )
+moving_platform_apply_velocity_on_leave = 2
+script = ExtResource( 2 )
+
+[node name="endCollisionShape" type="CollisionShape2D" parent="End"]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="End"]
+color = Color( 0.737255, 0.956863, 0.960784, 1 )
+offset = Vector2( -15, 15 )
+texture_rotation_degrees = -208.1
+polygon = PoolVector2Array( 0, 0, 0, -30, 30, -30, 30, 0 )
+
+[node name="redblock" type="Sprite" parent="."]
+position = Vector2( -370, 29 )
+scale = Vector2( 1.23, 0.225 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="redblock"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="redblock/KinematicBody2D"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 3 )
+
+[node name="yellowblock" type="Sprite" parent="."]
+position = Vector2( -390, 164 )
+texture = SubResource( 4 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="yellowblock"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="yellowblock/KinematicBody2D"]
+shape = SubResource( 5 )
+
+[node name="greenblock" type="Sprite" parent="."]
+position = Vector2( -396, 367 )
+texture = SubResource( 6 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="greenblock"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="greenblock/KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="blueblock" type="Sprite" parent="."]
+position = Vector2( -397, 584 )
+texture = SubResource( 8 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="blueblock"]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blueblock/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="purpleblock" type="Sprite" parent="."]
+position = Vector2( -398, 802 )
+texture = SubResource( 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="purpleblock"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="purpleblock/KinematicBody2D"]
+shape = SubResource( 11 )
+
+[node name="neutralblock" type="Sprite" parent="."]
+position = Vector2( -381, 1073 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="neutralblock"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="neutralblock/KinematicBody2D"]
+shape = SubResource( 13 )

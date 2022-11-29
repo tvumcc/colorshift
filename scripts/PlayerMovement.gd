@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 
-var jump_speed = -900
-var horizontal_speed = 800
+var jump_speed = -800
+var horizontal_speed = 600
 var gravity = 2500
 var rotation_amount = .1  # in radians
 var wait = false
