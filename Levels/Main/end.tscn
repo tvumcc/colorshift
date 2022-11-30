@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
+[ext_resource path="res://assets/colorshift.png" type="Texture" id=1]
 [ext_resource path="res://scripts/LevelProperties.gd" type="Script" id=2]
 [ext_resource path="res://assets/colors/colorscheme.png" type="Texture" id=3]
 
@@ -16,13 +17,14 @@ extents = Vector2( 6, 301.5 )
 
 [node name="Control2" type="Node2D"]
 script = ExtResource( 2 )
+bounds = PoolIntArray( 0, 0, 1000, 0 )
 startpos = Vector2( 78, 513 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 16.0
-margin_top = 336.0
-margin_right = 978.0
-margin_bottom = 790.0
+margin_left = 27.0
+margin_top = 203.0
+margin_right = 989.0
+margin_bottom = 657.0
 meta_underlined = false
 text = "Congrats! You made it!
 
@@ -61,3 +63,7 @@ collision_mask = 31
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D2"]
 shape = SubResource( 4 )
+
+[node name="Title" type="Sprite" parent="."]
+position = Vector2( 528, 112 )
+texture = ExtResource( 1 )
