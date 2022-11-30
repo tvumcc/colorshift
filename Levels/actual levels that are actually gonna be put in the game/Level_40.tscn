@@ -188,7 +188,7 @@ position = Vector2( -0.5, 0 )
 shape = SubResource( 26 )
 
 [node name="redblock5" type="Sprite" parent="Node2D"]
-position = Vector2( 832, 609 )
+position = Vector2( 833, 608 )
 scale = Vector2( 0.41, 0.119999 )
 texture = SubResource( 25 )
 
@@ -262,7 +262,7 @@ collision_mask = 0
 shape = SubResource( 7 )
 
 [node name="yellowblock6" type="Sprite" parent="Node2D2"]
-position = Vector2( 831.5, 608 )
+position = Vector2( 832.5, 607 )
 scale = Vector2( 0.405, 0.120001 )
 texture = SubResource( 27 )
 
@@ -288,7 +288,7 @@ collision_mask = 0
 shape = SubResource( 9 )
 
 [node name="greenblock2" type="Sprite" parent="Node2D3"]
-position = Vector2( 832, 608.012 )
+position = Vector2( 833, 607.013 )
 scale = Vector2( 0.41, 0.119875 )
 texture = SubResource( 29 )
 
@@ -376,7 +376,7 @@ collision_mask = 0
 shape = SubResource( 22 )
 
 [node name="purpleblock4" type="Sprite" parent="Node2D5"]
-position = Vector2( 832, 608 )
+position = Vector2( 833, 607 )
 scale = Vector2( 0.41, 0.120001 )
 texture = SubResource( 31 )
 
@@ -537,6 +537,7 @@ scale = Vector2( 1.07296, 0.128571 )
 texture = ExtResource( 4 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Node2D6/lava7" groups=["deathbox"]]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/lava7/KinematicBody2D"]
 position = Vector2( -0.0210571, -0.884766 )
@@ -584,6 +585,7 @@ scale = Vector2( 0.0897959, 0.941837 )
 texture = ExtResource( 4 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Node2D6/lava9" groups=["deathbox"]]
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/lava9/KinematicBody2D"]
 position = Vector2( -0.0210571, -0.884766 )
@@ -591,7 +593,7 @@ scale = Vector2( 1, 1 )
 shape = SubResource( 14 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Node2D6"]
-position = Vector2( 465, 572.125 )
+position = Vector2( 465, 563 )
 scale = Vector2( 0.355, 0.19875 )
 collision_layer = 31
 collision_mask = 0
@@ -609,7 +611,7 @@ texture = SubResource( 23 )
 shape = SubResource( 24 )
 
 [node name="KinematicBody2D2" type="KinematicBody2D" parent="Node2D6"]
-position = Vector2( 460, 663 )
+position = Vector2( 465, 663 )
 scale = Vector2( 0.355, 0.1075 )
 collision_layer = 31
 collision_mask = 0
