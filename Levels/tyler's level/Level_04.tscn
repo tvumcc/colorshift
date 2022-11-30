@@ -96,7 +96,7 @@ script = ExtResource( 9 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
-bounds = PoolIntArray( 0, -10000, 10000, 10000 )
+bounds = PoolIntArray( 0, -10000, 2000, 10000 )
 startpos = Vector2( 1000, 500 )
 
 [node name="Red" parent="." instance=ExtResource( 1 )]
@@ -1469,7 +1469,6 @@ texture = SubResource( 18 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door/KinematicBody2D"]
 position = Vector2( 0, -0.14209 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 21 )
 
 [node name="godotkey" type="RigidBody2D" parent="."]

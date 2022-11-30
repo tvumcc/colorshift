@@ -42,6 +42,8 @@ func collcheck():
 		var body := collision.collider
 		if body.is_in_group("deathbox"):
 			die()
+		elif body.is_in_group("resetbox"):
+			$"/root/Main".loadlevel($"/root/Main".get("levelpack"))
 		elif body.is_in_group("endpoint") and !wait:
 			wait = true
 			moveon()
