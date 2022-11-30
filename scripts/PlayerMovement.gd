@@ -18,8 +18,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	collcheck()
-	
-		
+
 func _physics_process(delta):
 	velocity.x = 0
 	if is_on_floor() and Input.is_action_pressed('jump'):
@@ -61,5 +60,5 @@ func moveon():
 	# code to load next level
 	clearhand()
 	main.gonext(main.get("levelpack"))
-	yield(get_tree().create_timer(0.1), "timeout")
+	yield(get_tree().create_timer(0.5), "timeout")
 	wait = false

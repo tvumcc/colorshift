@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Levels/tyler's level/Red.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Endanimation.gd" type="Script" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://scripts/LevelProperties.gd" type="Script" id=9]
 [ext_resource path="res://assets/colors/lava.PNG" type="Texture" id=10]
 [ext_resource path="res://scripts/movingplatform.gd" type="Script" id=11]
+[ext_resource path="res://scripts/door.gd" type="Script" id=12]
+[ext_resource path="res://icon.png" type="Texture" id=13]
+[ext_resource path="res://scripts/item.gd" type="Script" id=14]
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -74,13 +77,27 @@ extents = Vector2( 122.479, 121.614 )
 [sub_resource type="CircleShape2D" id=1]
 radius = 23.0
 
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 43.25, 13.5 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 43, 14 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 16, 16 )
+
 [node name="Level_\?\?\?\?" type="Node2D"]
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 bounds = PoolIntArray( 0, -10000, 10000, 10000 )
-startpos = Vector2( 834, 0 )
+startpos = Vector2( 1000, 500 )
 
 [node name="Red" parent="." instance=ExtResource( 1 )]
 
@@ -583,7 +600,7 @@ collision_mask = 0
 shape = SubResource( 9 )
 
 [node name="blueblock5" type="Sprite" parent="Blue/Node2D"]
-position = Vector2( 1521, 165 )
+position = Vector2( 1520.4, 165 )
 scale = Vector2( 0.149532, 0.5075 )
 texture = SubResource( 8 )
 
@@ -592,6 +609,7 @@ collision_layer = 8
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock5/KinematicBody2D"]
+scale = Vector2( 1, 1 )
 shape = SubResource( 9 )
 
 [node name="blueblock6" type="Sprite" parent="Blue/Node2D"]
@@ -976,6 +994,18 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock12/KinematicBody2D"]
 shape = SubResource( 13 )
 
+[node name="neutralblock41" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1590, 163 )
+scale = Vector2( 0.145, 0.559219 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock41"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock41/KinematicBody2D"]
+shape = SubResource( 13 )
+
 [node name="neutralblock13" type="Sprite" parent="Neutralspace/Node2D"]
 position = Vector2( 1372.63, 114 )
 scale = Vector2( 0.213751, 0.152305 )
@@ -1288,6 +1318,54 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock38/KinematicBody2D"]
 shape = SubResource( 13 )
 
+[node name="neutralblock39" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1429, 716 )
+scale = Vector2( 0.0149997, 0.135 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock39"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock39/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock40" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1554.69, 230 )
+scale = Vector2( 0.4931, 0.15 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock40"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock40/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock42" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1554.69, 230 )
+scale = Vector2( 0.4931, 0.15 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock42"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock42/KinematicBody2D"]
+shape = SubResource( 13 )
+
+[node name="neutralblock43" type="Sprite" parent="Neutralspace/Node2D"]
+position = Vector2( 1556, 99 )
+scale = Vector2( 0.4931, 0.15 )
+texture = SubResource( 12 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock43"]
+collision_layer = 31
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neutralspace/Node2D/neutralblock43/KinematicBody2D"]
+shape = SubResource( 13 )
+
 [node name="deathblocks" type="Node2D" parent="Neutralspace"]
 
 [node name="lava" type="Sprite" parent="Neutralspace/deathblocks"]
@@ -1370,6 +1448,112 @@ offset = Vector2( -15, 15 )
 texture_rotation_degrees = -208.1
 polygon = PoolVector2Array( 0, 0, 0, -30, 30, -30, 30, 0 )
 
+[node name="door" type="RigidBody2D" parent="."]
+position = Vector2( 1000, 541 )
+collision_layer = 64
+collision_mask = 0
+mode = 3
+contacts_reported = 999
+contact_monitor = true
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+shape = SubResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="door"]
+scale = Vector2( 0.4325, 0.135 )
+texture = SubResource( 18 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door/KinematicBody2D"]
+shape = SubResource( 21 )
+
+[node name="godotkey" type="RigidBody2D" parent="."]
+position = Vector2( 164, 973 )
+collision_layer = 32
+collision_mask = 96
+mode = 3
+contacts_reported = 999
+contact_monitor = true
+script = ExtResource( 14 )
+startpos = Vector2( 164, 973 )
+
+[node name="Sprite" type="Sprite" parent="godotkey"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="godotkey"]
+shape = SubResource( 20 )
+
+[node name="godotkey2" type="RigidBody2D" parent="."]
+position = Vector2( 481, -169 )
+collision_layer = 32
+collision_mask = 96
+mode = 3
+contacts_reported = 999
+contact_monitor = true
+script = ExtResource( 14 )
+startpos = Vector2( 481, -169 )
+
+[node name="Sprite" type="Sprite" parent="godotkey2"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="godotkey2"]
+shape = SubResource( 20 )
+
+[node name="godotkey3" type="RigidBody2D" parent="."]
+position = Vector2( 889, -294 )
+collision_layer = 32
+collision_mask = 96
+mode = 3
+contacts_reported = 999
+contact_monitor = true
+script = ExtResource( 14 )
+startpos = Vector2( 889, -294 )
+
+[node name="Sprite" type="Sprite" parent="godotkey3"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="godotkey3"]
+shape = SubResource( 20 )
+
+[node name="godotkey4" type="RigidBody2D" parent="."]
+position = Vector2( 1554, 165 )
+collision_layer = 32
+collision_mask = 96
+mode = 3
+contacts_reported = 999
+contact_monitor = true
+script = ExtResource( 14 )
+startpos = Vector2( 1554, 165 )
+
+[node name="Sprite" type="Sprite" parent="godotkey4"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="godotkey4"]
+shape = SubResource( 20 )
+
+[node name="godotkey5" type="RigidBody2D" parent="."]
+position = Vector2( 1642, 836 )
+collision_layer = 32
+collision_mask = 96
+mode = 3
+contacts_reported = 999
+contact_monitor = true
+script = ExtResource( 14 )
+startpos = Vector2( 1642, 836 )
+
+[node name="Sprite" type="Sprite" parent="godotkey5"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="godotkey5"]
+shape = SubResource( 20 )
+
 [node name="redblock" type="Sprite" parent="."]
 position = Vector2( -370, 29 )
 scale = Vector2( 1.23, 0.225 )
@@ -1436,3 +1620,5 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="neutralblock/KinematicBody2D"]
 shape = SubResource( 13 )
+
+[connection signal="body_entered" from="door" to="door" method="_on_door_body_entered"]

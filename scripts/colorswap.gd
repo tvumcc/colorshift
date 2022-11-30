@@ -32,13 +32,6 @@ func _process(delta):
 		uiscene.hide()
 	buttoninputs()
 	
-	if Input.is_action_just_pressed("lvlz"):
-		loadlevel(levelexport[0])
-		print("aaa")
-	if Input.is_action_just_pressed("lvlx"):
-		loadlevel(levelexport[1])
-		print("bbb")
-	
 	
 func buttoninputs():
 	if Input.is_action_just_pressed("reset"):

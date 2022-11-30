@@ -25,7 +25,6 @@ func _process(delta):
 		item.position = get_children()[0].global_position
 		if Input.is_action_just_pressed("click"):
 			holding = false
-			
 
 func drop():
 	if !holding:
@@ -37,7 +36,6 @@ func _on_Hand_body_entered(body):
 	if !holding:
 		item = body
 		currentlytouched = true
-	print(body)
 
 func _on_Hand_body_exited(body):
 	currentlytouched = false
