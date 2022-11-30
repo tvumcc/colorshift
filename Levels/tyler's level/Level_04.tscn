@@ -1223,8 +1223,8 @@ collision_mask = 0
 shape = SubResource( 13 )
 
 [node name="neutralblock31" type="Sprite" parent="Neutralspace/Node2D"]
-position = Vector2( 1628.56, 1038 )
-scale = Vector2( 0.644376, 0.135 )
+position = Vector2( 1628.56, 1037.75 )
+scale = Vector2( 0.644376, 0.1375 )
 texture = SubResource( 12 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Neutralspace/Node2D/neutralblock31"]
