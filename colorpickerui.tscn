@@ -26,6 +26,7 @@ anchor_bottom = 1.0
 visible = false
 position = Vector2( 249, 53 )
 scale = Vector2( 1.5, 1.5 )
+z_index = 10
 
 [node name="red" type="TextureButton" parent="buttons"]
 anchor_left = 0.5

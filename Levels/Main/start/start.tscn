@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/Endanimation.gd" type="Script" id=1]
 [ext_resource path="res://scripts/LevelProperties.gd" type="Script" id=2]
 [ext_resource path="res://assets/colors/colorscheme.png" type="Texture" id=3]
+[ext_resource path="res://assets/colorshift.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 23.0
@@ -23,12 +24,12 @@ script = ExtResource( 2 )
 startpos = Vector2( 78, 513 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 26.0
-margin_top = 38.0
-margin_right = 988.0
-margin_bottom = 492.0
+margin_left = 16.0
+margin_top = 200.0
+margin_right = 978.0
+margin_bottom = 654.0
 meta_underlined = false
-text = "Colorshift by team STAT
+text = "Brought to you by team STAT
 
 You are a mystical triangle being that moves through the colors of light as through dimensions. You can control what you see and interact with at a time. What you cannot see cannot hurt you.
 
@@ -38,15 +39,11 @@ Click or press E to pick up/put down items around you; items will get picked up 
 Press R to respawn.
 Press T to reset the entire level.
 
-Use your inherent intelligence, creativity, and skill to succeed in each level. If you can.
-
-P.S.: \"Look on my Works, ye Mighty, and despair!\"
-P.S.S.: color is light so it counts"
+Use your inherent intelligence, creativity, and skill to succeed in each level. If you can."
 scroll_active = false
 
 [node name="End" type="KinematicBody2D" parent="." groups=["endpoint"]]
 position = Vector2( 973, 556 )
-moving_platform_apply_velocity_on_leave = 2
 script = ExtResource( 1 )
 
 [node name="endCollisionShape" type="CollisionShape2D" parent="End"]
@@ -86,3 +83,7 @@ collision_mask = 31
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D2"]
 shape = SubResource( 4 )
+
+[node name="Title" type="Sprite" parent="."]
+position = Vector2( 528, 112 )
+texture = ExtResource( 4 )

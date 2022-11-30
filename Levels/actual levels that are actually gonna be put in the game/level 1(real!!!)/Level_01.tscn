@@ -197,7 +197,6 @@ shape = SubResource( 13 )
 
 [node name="End" type="KinematicBody2D" parent="." groups=["endpoint"]]
 position = Vector2( 961, 138 )
-moving_platform_apply_velocity_on_leave = 2
 script = ExtResource( 4 )
 
 [node name="endCollisionShape" type="CollisionShape2D" parent="End"]

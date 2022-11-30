@@ -399,7 +399,6 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/neutralblock/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="neutralblock10" type="Sprite" parent="Node2D6"]
@@ -412,7 +411,6 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/neutralblock10/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="neutralblock2" type="Sprite" parent="Node2D6"]
@@ -425,7 +423,6 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/neutralblock2/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="neutralblock3" type="Sprite" parent="Node2D6"]
@@ -438,7 +435,6 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/neutralblock3/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="neutralblock4" type="Sprite" parent="Node2D6"]
@@ -451,7 +447,6 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/neutralblock4/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="neutralblock9" type="Sprite" parent="Node2D6"]
@@ -464,7 +459,6 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/neutralblock9/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="neutralblock11" type="Sprite" parent="Node2D6"]
@@ -477,7 +471,6 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/neutralblock11/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="neutralblock5" type="Sprite" parent="Node2D6"]
@@ -502,7 +495,6 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/neutralblock6/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="neutralblock8" type="Sprite" parent="Node2D6"]
@@ -515,7 +507,6 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/neutralblock8/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="neutralblock7" type="Sprite" parent="Node2D6"]
@@ -528,7 +519,6 @@ collision_layer = 31
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/neutralblock7/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="lava7" type="Sprite" parent="Node2D6"]
@@ -552,7 +542,6 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/lava8/KinematicBody2D"]
 position = Vector2( -0.0210266, -0.884766 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 14 )
 
 [node name="lava10" type="Sprite" parent="Node2D6"]
@@ -564,7 +553,6 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/lava10/KinematicBody2D"]
 position = Vector2( -0.0210571, -0.884766 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 14 )
 
 [node name="lava11" type="Sprite" parent="Node2D6"]
@@ -576,7 +564,6 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/lava11/KinematicBody2D"]
 position = Vector2( -0.0210571, -0.885254 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 14 )
 
 [node name="lava9" type="Sprite" parent="Node2D6"]
@@ -589,7 +576,6 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/lava9/KinematicBody2D"]
 position = Vector2( -0.0210571, -0.884766 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 14 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Node2D6"]
@@ -604,7 +590,6 @@ speed = 2
 
 [node name="neutralblock12" type="Sprite" parent="Node2D6/KinematicBody2D"]
 position = Vector2( -0.00012207, 0 )
-scale = Vector2( 1, 1 )
 texture = SubResource( 23 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/KinematicBody2D"]
@@ -621,22 +606,26 @@ point2 = Vector2( 835, 663 )
 speed = 2
 
 [node name="neutralblock12" type="Sprite" parent="Node2D6/KinematicBody2D2"]
-scale = Vector2( 1, 1 )
 texture = SubResource( 23 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D6/KinematicBody2D2"]
 shape = SubResource( 24 )
 
 [node name="End" type="KinematicBody2D" parent="." groups=["endpoint"]]
-position = Vector2( 950, 482 )
-moving_platform_apply_velocity_on_leave = 2
+position = Vector2( 960, 496 )
 script = ExtResource( 3 )
 
 [node name="endCollisionShape" type="CollisionShape2D" parent="End"]
 shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Polygon2D" type="Polygon2D" parent="End"]
 color = Color( 0.737255, 0.956863, 0.960784, 1 )
 offset = Vector2( -15, 15 )
 texture_rotation_degrees = -208.1
 polygon = PoolVector2Array( 0, 0, 0, -30, 30, -30, 30, 0 )
+__meta__ = {
+"_edit_lock_": true
+}

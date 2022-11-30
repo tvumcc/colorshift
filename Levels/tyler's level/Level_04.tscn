@@ -1434,18 +1434,23 @@ position = Vector2( -0.0210571, -0.884766 )
 shape = SubResource( 14 )
 
 [node name="End" type="KinematicBody2D" parent="." groups=["endpoint"]]
-position = Vector2( 1000, 635 )
-moving_platform_apply_velocity_on_leave = 2
+position = Vector2( 1000, 672 )
 script = ExtResource( 2 )
 
 [node name="endCollisionShape" type="CollisionShape2D" parent="End"]
 shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Polygon2D" type="Polygon2D" parent="End"]
 color = Color( 0.737255, 0.956863, 0.960784, 1 )
 offset = Vector2( -15, 15 )
 texture_rotation_degrees = -208.1
 polygon = PoolVector2Array( 0, 0, 0, -30, 30, -30, 30, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="door" type="RigidBody2D" parent="."]
 position = Vector2( 1000, 541 )
