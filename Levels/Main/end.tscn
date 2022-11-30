@@ -16,9 +16,10 @@ extents = Vector2( 100, 99.5 )
 extents = Vector2( 6, 301.5 )
 
 [node name="Control2" type="Node2D"]
+position = Vector2( -4, 0 )
 script = ExtResource( 2 )
 bounds = PoolIntArray( 0, 0, 1000, 0 )
-startpos = Vector2( 78, 513 )
+startpos = Vector2( 551, 530 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 27.0

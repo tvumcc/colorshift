@@ -584,13 +584,13 @@ texture = SubResource( 23 )
 shape = SubResource( 24 )
 
 [node name="KinematicBody2D2" type="KinematicBody2D" parent="Node2D6"]
-position = Vector2( 835, 663 )
+position = Vector2( 835, 675 )
 scale = Vector2( 0.355, 0.1075 )
 collision_layer = 31
 collision_mask = 0
 script = ExtResource( 5 )
-point1 = Vector2( 835, 663 )
-point2 = Vector2( 465, 663 )
+point1 = Vector2( 835, 675 )
+point2 = Vector2( 465, 675 )
 speed = 2
 
 [node name="neutralblock12" type="Sprite" parent="Node2D6/KinematicBody2D2"]
