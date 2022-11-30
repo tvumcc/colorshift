@@ -1557,8 +1557,15 @@ texture = ExtResource( 13 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="godotkey5"]
 shape = SubResource( 20 )
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 858.0
+margin_top = 556.0
+margin_right = 1148.0
+margin_bottom = 596.0
+text = "Gather the GODOT KEYS and feed them to the door to get him to move"
+
 [node name="redblock" type="Sprite" parent="."]
-position = Vector2( -370, 29 )
+position = Vector2( -429, 54 )
 scale = Vector2( 1.23, 0.225 )
 texture = SubResource( 2 )
 

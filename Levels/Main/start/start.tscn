@@ -40,7 +40,8 @@ Press T to reset the entire level.
 
 Use your inherent intelligence, creativity, and skill to succeed in each level. If you can.
 
-P.S.: \"Look on my Works, ye Mighty, and despair!\""
+P.S.: \"Look on my Works, ye Mighty, and despair!\"
+P.S.S.: color is light so it counts"
 scroll_active = false
 
 [node name="End" type="KinematicBody2D" parent="." groups=["endpoint"]]

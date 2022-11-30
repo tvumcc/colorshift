@@ -17,7 +17,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	collcheck()
 
 func _physics_process(delta):
 	velocity.x = 0
@@ -32,7 +32,7 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 
 	velocity = move_and_slide(velocity, Vector2(0, -1))
-	collcheck()
+	
 	
 func collcheck():
 	if wait:
@@ -51,7 +51,6 @@ func clearhand():
 	$'Hand'.drop()
 			
 func die():
-	#$"/root/Main".loadlevel($"/root/Main".get("levelpack"))
 	clearhand()
 	position = main.get("level").startpos
 	print('died')
