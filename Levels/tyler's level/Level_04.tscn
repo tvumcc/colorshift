@@ -86,7 +86,7 @@ atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 200, 200 )
 
 [sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 43, 14 )
+extents = Vector2( 43, 14.1421 )
 
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 16, 16 )
@@ -609,7 +609,6 @@ collision_layer = 8
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blue/Node2D/blueblock5/KinematicBody2D"]
-scale = Vector2( 1, 1 )
 shape = SubResource( 9 )
 
 [node name="blueblock6" type="Sprite" parent="Blue/Node2D"]
@@ -1450,6 +1449,8 @@ polygon = PoolVector2Array( 0, 0, 0, -30, 30, -30, 30, 0 )
 
 [node name="door" type="RigidBody2D" parent="."]
 position = Vector2( 1000, 541 )
+scale = Vector2( 1.20002, 0.840088 )
+z_index = -1
 collision_layer = 64
 collision_mask = 0
 mode = 3
@@ -1467,6 +1468,8 @@ texture = SubResource( 18 )
 [node name="KinematicBody2D" type="KinematicBody2D" parent="door"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door/KinematicBody2D"]
+position = Vector2( 0, -0.14209 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 21 )
 
 [node name="godotkey" type="RigidBody2D" parent="."]

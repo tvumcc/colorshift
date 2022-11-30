@@ -1,5 +1,63 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
 
-[node name="Control" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[ext_resource path="res://scripts/LevelProperties.gd" type="Script" id=2]
+[ext_resource path="res://assets/colors/colorscheme.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 100, 99.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 6, 301.5 )
+
+[node name="Control2" type="Node2D"]
+script = ExtResource( 2 )
+startpos = Vector2( 78, 513 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 26.0
+margin_top = 38.0
+margin_right = 988.0
+margin_bottom = 492.0
+meta_underlined = false
+text = "Congrats! You made it!
+
+\"When I was about 28, after a decade as a professional comedian, I realized one night in LA that the purpose of my life had always been to free people from concern, just like my dad. When I realized this, I dubbed my new devotion: the Church of Freedom from Concern, the Church of FFC. And I dedicated myself to that ministry. What’s yours? How will you serve the world? What do they need that your talent can provide? That’s all you have to figure out.” -  Jim Carey
+
+Thank you for playing Colorshift by team STAT.
+
+"
+scroll_active = false
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511, 588.5 )
+scale = Vector2( 5.09, 0.115 )
+texture = SubResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Sprite"]
+collision_layer = 31
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/KinematicBody2D"]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 3 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( -4, 297 )
+collision_layer = 31
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+shape = SubResource( 4 )
+
+[node name="KinematicBody2D2" type="KinematicBody2D" parent="."]
+position = Vector2( 1024, 298 )
+collision_layer = 31
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D2"]
+shape = SubResource( 4 )
